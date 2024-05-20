@@ -1,13 +1,13 @@
 from sqlalchemy.orm import Session
 from models import Lead, LeadState
-from schemas import LeadCreate, LeadUpdate
+from schemas import LeadCreate
 
-def create_lead(db: Session, lead: LeadCreate):
+def create_lead(db: Session, lead: LeadCreate, resume_path: str):
     db_lead = Lead(
         first_name=lead.first_name,
         last_name=lead.last_name,
         email=lead.email,
-        resume=lead.resume,
+        resume=resume_path,
         state=LeadState.PENDING,
     )
     db.add(db_lead)

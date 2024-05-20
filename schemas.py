@@ -9,7 +9,6 @@ class LeadBase(BaseModel):
     first_name: str
     last_name: str
     email: EmailStr
-    resume: str
 
 class LeadCreate(LeadBase):
     pass
@@ -19,6 +18,7 @@ class LeadUpdate(BaseModel):
 
 class Lead(LeadBase):
     id: int
+    resume: str
     state: LeadState
 
     class Config:
