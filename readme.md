@@ -12,8 +12,8 @@
 
 1. Clone the repository:
     ```bash
-    git clone <your-repo-url>
-    cd <your-repo-directory>
+    git clone https://github.com/smellycattt/lead-management-app.git
+    cd lead-management-app
     ```
 
 2. Set up a virtual environment and install dependencies:
